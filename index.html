@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Teddy Day ❤️</title>
+
+  <!-- Mobile responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SCREEN 1 -->
+<div class="screen active" id="screen1">
+  <h1>Happy Teddy Day 🧸❤️</h1>
+  <p>Do you want to choose your own teddy?</p>
+
+  <div class="buttons">
+    <button onclick="sayYes()">Yes 💖</button>
+    <button onclick="sayNo()">No 💔</button>
+  </div>
+
+  <div id="lottieBox"></div>
+</div>
+
+<!-- SCREEN 2 -->
+<div class="screen" id="screen2">
+  <h1>Choose Your Teddy 🧸</h1>
+
+  <div class="teddy-options">
+    <img src="./images/teddy.png" alt="Teddy Bear" onclick="selectTeddy('Teddy Bear')">
+    <img src="./images/stitch.png" alt="Stitch" onclick="selectTeddy('Stitch')">
+    <img src="./images/panda.png" alt="Panda" onclick="selectTeddy('Panda')">
+    <img src="./images/tech.png" alt="Tech Teddy" onclick="selectTeddy('Tech Teddy')">
+  </div>
+</div>
+
+<!-- SCREEN 3 -->
+<div class="screen" id="screen3">
+  <h1 id="finalText"></h1>
+
+  <div class="love-letter">
+    <p>
+      My Love 💕<br><br>
+      Just like this teddy, I promise to always stay by your side —
+      to comfort you when you’re sad, celebrate you when you’re happy,
+      and love you more with every single day 🧸❤️<br><br>
+      You are my favorite forever.<br><br>
+      Happy Valentine’s Day 💖
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
