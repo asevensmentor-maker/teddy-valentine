@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 90%;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1e4d;
+}
+
+#lottieBox {
+  width: 260px;
+  margin-top: 25px;
+}
+
+/* Teddy selection */
+.teddy-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.teddy-options img {
+  width: 140px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.teddy-options img:hover {
+  transform: scale(1.1);
+}
+
+/* Love Letter */
+.love-letter {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 90%;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
