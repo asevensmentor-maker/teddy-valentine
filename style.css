@@ -4,9 +4,10 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#ffb6c1, #ffc0cb);
   text-align: center;
+  overflow-x: hidden;
 }
 
 .screen {
@@ -24,37 +25,29 @@ body {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 p {
   font-size: 1.1rem;
-  max-width: 90%;
 }
 
 .buttons {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 button {
-  padding: 12px 28px;
+  padding: 12px 25px;
   margin: 10px;
-  font-size: 1.1rem;
-  border-radius: 30px;
+  border-radius: 25px;
   border: none;
+  font-size: 1.1rem;
   background: #ff4d6d;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
   background: #ff1e4d;
-}
-
-#lottieBox {
-  width: 260px;
-  margin-top: 25px;
 }
 
 /* Teddy selection */
@@ -62,7 +55,6 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  margin-top: 20px;
 }
 
 .teddy-options img {
@@ -76,12 +68,42 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Love Letter */
+/* Final screen background */
+#screen3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay {
+  background: rgba(255,182,193,0.88);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .love-letter {
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 20px;
   max-width: 90%;
-  font-size: 1.1rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Floating hearts */
+.hearts::before {
+  content: "💖 💕 💘 💝 ❤️";
+  position: fixed;
+  bottom: -50px;
+  width: 100%;
+  font-size: 24px;
+  animation: floatHearts 8s linear infinite;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
 }
