@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Happy Teddy Day ❤️</title>
 
-  <!-- Mobile responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Lottie -->
@@ -14,6 +13,9 @@
 </head>
 <body>
 
+<!-- Floating hearts -->
+<div class="hearts"></div>
+
 <!-- SCREEN 1 -->
 <div class="screen active" id="screen1">
   <h1>Happy Teddy Day 🧸❤️</h1>
@@ -21,10 +23,17 @@
 
   <div class="buttons">
     <button onclick="sayYes()">Yes 💖</button>
-    <button onclick="sayNo()">No 💔</button>
+    <button id="noBtn" onclick="sayNo()">No 💔</button>
   </div>
 
-  <div id="lottieBox"></div>
+  <lottie-player
+    id="teddyAnimation"
+    background="transparent"
+    speed="1"
+    style="width:260px;height:260px"
+    loop
+    autoplay>
+  </lottie-player>
 </div>
 
 <!-- SCREEN 2 -->
@@ -32,26 +41,39 @@
   <h1>Choose Your Teddy 🧸</h1>
 
   <div class="teddy-options">
-    <img src="./images/teddy.png" alt="Teddy Bear" onclick="selectTeddy('Teddy Bear')">
-    <img src="./images/stitch.png" alt="Stitch" onclick="selectTeddy('Stitch')">
-    <img src="./images/panda.png" alt="Panda" onclick="selectTeddy('Panda')">
-    <img src="./images/tech.png" alt="Tech Teddy" onclick="selectTeddy('Tech Teddy')">
+    <img src="./images/teddy.png" onclick="selectTeddy('Teddy Bear')">
+    <img src="./images/stitch.png" onclick="selectTeddy('Stitch')">
+    <img src="./images/panda.png" onclick="selectTeddy('Panda')">
+    <img src="./images/tech.png" onclick="selectTeddy('Tech Teddy')">
   </div>
 </div>
 
 <!-- SCREEN 3 -->
 <div class="screen" id="screen3">
-  <h1 id="finalText"></h1>
+  <div class="overlay">
+    <h1 id="finalText"></h1>
 
-  <div class="love-letter">
-    <p>
-      My Love 💕<br><br>
-      Just like this teddy, I promise to always stay by your side —
-      to comfort you when you’re sad, celebrate you when you’re happy,
-      and love you more with every single day 🧸❤️<br><br>
-      You are my favorite forever.<br><br>
-      Happy Valentine’s Day 💖
-    </p>
+    <!-- Hug animation -->
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_3rwasyjy.json"
+      background="transparent"
+      speed="1"
+      style="width:260px;height:260px"
+      loop
+      autoplay>
+    </lottie-player>
+
+    <div class="love-letter">
+      <p>
+        My Love 💕<br><br>
+        Just like this teddy, I promise to always stay with you —
+        to protect you, comfort you, and love you endlessly 🧸❤️<br><br>
+        You are my forever.<br><br>
+        Happy Valentine’s Day 💖
+      </p>
+    </div>
+
+    <button onclick="shareLove()">📩 Share Love</button>
   </div>
 </div>
 
